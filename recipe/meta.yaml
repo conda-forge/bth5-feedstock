@@ -1,5 +1,5 @@
 {% set name = "bth5" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Quansight/bitemporal-h5/releases/download/{{ version }}/bitemporal-h5-{{ version }}.tar.gz
-  sha256: 11007fcaa3cbada896f6e459f1068fa1c86d6b721a85b5eb531eec3e53e0196f
+  sha256: 4ff9f419b44e29f2d8e9db2a5188604b7609a368c4d4f5c95a7236c250958eee
 
 build:
   noarch: python
