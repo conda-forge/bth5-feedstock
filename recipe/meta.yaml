@@ -11,20 +11,22 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - h5py >=2.8
     - numpy >=1.16
     - numba >=0.45
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bth5
 
